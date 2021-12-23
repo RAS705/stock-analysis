@@ -16,7 +16,7 @@ Steve asked that the solution create an output table which prints a line per tic
 
 The output will also show if the return on investment is positive or negative for the year by coloring the cell of the table either green or red. 
 
-##2017 Output
+## 2017 Output
 
 The analysis of the 2017 stock tickers produced the following output:
 
@@ -28,7 +28,7 @@ The output table shows the following:
 - half the stock making over 50% return on value 
 - Only one stock lost money 
 
-##2018 Output
+## 2018 Output
 
 The analysis of the 2018 stock tickers produced the following output:
 
@@ -97,7 +97,7 @@ The solution would sort the datset so that the ticker names are in order, then r
 </code>
 
 
-####Performance to Analyze 2017 data
+#### Performance to Analyze 2017 data
 
 ![](Resources/2017_Original_Solution.jpg)
 
@@ -105,7 +105,7 @@ The solution would sort the datset so that the ticker names are in order, then r
 
 ![](Resources/2018_Original_Solution.jpg)
 
-###Original Macro + an Array for ticker
+### Original Macro + an Array for ticker
 As the solution was being tested, an array was introduced for the list of stock tickers to be analyzed. One drawback of this solution is you have to know the list of stock tickers beforehand for analysis. The solution would sort the datset so that the ticker names are in order, then read the dataset line by line and determine if the current line is part of the current ticker set or not, and then update the appropriate variables. 
 
 <code>
@@ -164,15 +164,15 @@ As the solution was being tested, an array was introduced for the list of stock 
           If Cells(i, 1) = ticker Then
 </code>
 
-####Performance to Analyze 2017 data
+#### Performance to Analyze 2017 data
 
 ![](Resources/2017_partial_array_Solution.jpg)
 
-####Performance to Analyze 2018 data
+#### Performance to Analyze 2018 data
 
 ![](Resources/2018_partial_array_Solution.jpg)
 
-###Refactored Macro
+### Refactored Macro
 As the solution was being tested, an array was introduced for the list of stock tickers to be analyzed. One drawback of this solution is you have to know the list of stock tickers beforehand for analysis. The solution would sort the datset so that the ticker names are in order, then read the dataset line by line and determine if the current line is part of the current ticker set or not, and then update the appropriate variables.
 
 
@@ -213,16 +213,16 @@ As the solution was being tested, an array was introduced for the list of stock 
 
 </code>
 
-####Performance to Analyze 2017 data
+#### Performance to Analyze 2017 data
 
 ![](Resources/2017_Refactored_Solution.jpg)
 
-####Performance to Analyze 2018 data
+#### Performance to Analyze 2018 data
 
 ![](Resources/2018_Refactored_Solution.jpg)
 
 
-##Summary
+## Summary
 <!--- Summary: In a summary statement, address the following questions.
 What are the advantages or disadvantages of re-factoring code?
 How do these pros and cons apply to re factoring the original VBA script? ---> 
