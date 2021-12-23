@@ -20,7 +20,7 @@ The output will also show if the return on investment is positive or negative fo
 
 The analysis of the 2017 stock tickers produced the following output:
 
-![](Resources/2017_Results.jpg)
+![](Resources/2017_results.jpg)
 
 The output table shows the following:
 
@@ -32,7 +32,7 @@ The output table shows the following:
 
 The analysis of the 2018 stock tickers produced the following output:
 
-![](Resources/2018_Results.jpg)
+![](Resources/2018_results.jpg)
 
 The output table shows the following:
 
