@@ -16,7 +16,7 @@ Steve asked that the solution create an output table which prints a line per tic
 
 The output will also show if the return on investment is positive or negative for the year by coloring the cell of the table either green or red. 
 
-## 2017 Output
+## 2017 Analysis Output
 
 The analysis of the 2017 stock tickers produced the following output:
 
@@ -28,7 +28,7 @@ The output table shows the following:
 - half the stock making over 50% return on value 
 - Only one stock lost money 
 
-## 2018 Output
+## 2018 Analysis Output
 
 The analysis of the 2018 stock tickers produced the following output:
 
@@ -96,6 +96,9 @@ The solution would sort the datset so that the ticker names are in order, then r
         End If
 </code>
 
+### Performance of Original Solution
+
+The original macro ran and produced the correct results, but was slow. Both yearly analysis took over 3 seconds.
 
 #### Performance to Analyze 2017 data
 
@@ -105,8 +108,8 @@ The solution would sort the datset so that the ticker names are in order, then r
 
 ![](Resources/2018_Original_Solution.jpg)
 
-### Original Macro + an Array for ticker
-As the solution was being tested, an array was introduced for the list of stock tickers to be analyzed. One drawback of this solution is you have to know the list of stock tickers beforehand for analysis. The solution would sort the datset so that the ticker names are in order, then read the dataset line by line and determine if the current line is part of the current ticker set or not, and then update the appropriate variables. 
+### Performance of Nested Loops
+As the solution was being tested, an array was introduced for the list of stock tickers to be analyzed. One drawback of this solution is you have to know the list of stock tickers beforehand for analysis. The solution would sort the dataset so that the ticker names are in order, then read the dataset line by line and determine if the current line is part of the current ticker set or not, and then update the appropriate variables. 
 
 <code>
 
@@ -164,6 +167,10 @@ As the solution was being tested, an array was introduced for the list of stock 
           If Cells(i, 1) = ticker Then
 </code>
 
+### Performance of Nested Loop Solution
+
+The solution was changed to support nested loops and an array for the tickers. This change ran and produced the correct results, and was much faster than the original solution. Both yearly analysis took just under half a second. The time for this change to the solution were roughly a tenth of the time for the original solution.
+
 #### Performance to Analyze 2017 data
 
 ![](Resources/2017_partial_array_Solution.jpg)
@@ -213,6 +220,10 @@ As the solution was being tested, an array was introduced for the list of stock 
 
 </code>
 
+### Performance of Refactored Solution
+
+The solution was changed to support a single loop and an array for the tickers and for the summary values. This change ran and produced the correct results, and was much faster than the original solution. Both yearly analysis took just under a quarter of a second. The time for this change to the solution were roughly 5% of the time for the original solution.
+
 #### Performance to Analyze 2017 data
 
 ![](Resources/2017_Refactored_Solution.jpg)
@@ -226,3 +237,5 @@ As the solution was being tested, an array was introduced for the list of stock 
 <!--- Summary: In a summary statement, address the following questions.
 What are the advantages or disadvantages of re-factoring code?
 How do these pros and cons apply to re factoring the original VBA script? ---> 
+
+As this solution was refactored through a couple of different iterations, it became apparent that by introducing an array, and not utilizing static variables that the time was improved greatly. By utilizing arrays for the summations we were able to remove one of the loops and make the solution even quicker.
